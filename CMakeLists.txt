@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.6)
+project(SO_PR3)
+find_package(Curses REQUIRED)
+include_directories(${CURSES_INCLUDE_DIR})
+SET(CMAKE_CXX_FLAGS "-std=c++14 -pthread")
+set(CMAKE_CXX_STANDARD 14)
+
+set(SOURCE_FILES src/main.cpp src/SmallBullet.cpp src/SmallBullet.h src/Player.cpp src/Player.h src/Direction.h src/BigAlienShip.cpp src/BigAlienShip.h src/GameObject.h src/GameObject.cpp src/BigBullet.cpp src/BigBullet.h src/SmallAlienShip.cpp src/SmallAlienShip.h src/ShipWreck.cpp src/ShipWreck.h)
+add_executable(SO2_PR3 ${SOURCE_FILES})
+target_link_libraries(SO2_PR3 ${CURSES_LIBRARIES})
